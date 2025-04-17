@@ -1,11 +1,10 @@
-version: '2'
 services:
   velociraptor:
     container_name: velociraptor
     image: wlambert/velociraptor
-    #build:
-    #  context: ./
-    #  dockerfile: Dockerfile
+    build:
+     context: ./
+     dockerfile: Dockerfile
     volumes:
       - ./velociraptor:/velociraptor/:rw
     environment:
